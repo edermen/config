@@ -1,0 +1,11 @@
+#folders
+.git
+# files
+.directory
+
+# vim service files
+*.swp
+*.swo
+tags
+.tags
+

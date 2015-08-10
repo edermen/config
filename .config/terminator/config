@@ -1,0 +1,33 @@
+[global_config]
+  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, MavenPluginURLHandler, LaunchpadBugURLHandler
+  window_state = maximise
+  title_receive_fg_color = "#396cda"
+  title_transmit_bg_color = "#b4bd8e"
+  title_transmit_fg_color = "#512626"
+[keybindings]
+  go_up = KP_Down
+  go_down = KP_Up
+  close_term = KP_Down
+  split_vert = KP_Page_Down
+  go_right = KP_Right
+  go_left = KP_Left
+[profiles]
+  [[default]]
+    palette = "#2e3436:#7fa23c:#a7ba52:#c4a000:#3465a4:#778757:#c9c96c:#f1f1f1:#000000:#d66746:#8ae234:#fce94f:#729fcf:#141414:#a4c247:#ffffff"
+    background_image = None
+    custom_command = bash -l
+    use_system_font = False
+    foreground_color = "#d7caa1"
+    use_custom_command = True
+    font = Cousine 14
+    background_color = "#132324"
+    scrollback_infinite = True
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
