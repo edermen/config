@@ -12,9 +12,9 @@ add-apt-repositoryi -y ppa:chris-lea/node.js
 apt-get update
 
 #install basic package
-apt-get install -y wget \
+apt-get install -y wget curl \
+checkinstall
 git-core \
-curl \
 xclip \
 zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev \
 libcurl4-openssl-dev \
