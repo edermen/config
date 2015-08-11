@@ -48,6 +48,9 @@ echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 # install Vundle plugin manager
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
+#install tmuxifier
+git clone https://github.com/jimeh/tmuxifier.git ~/.tmuxifier
+export PATH="$HOME/.tmuxifier/bin:$PATH"
 
 # copy setting
 cp ./. ~/ -R
