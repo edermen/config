@@ -13,7 +13,7 @@ apt-get update
 
 #install basic package
 apt-get install -y wget curl \
-checkinstall
+checkinstall \
 git-core \
 xclip \
 zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev \
@@ -37,13 +37,13 @@ usermod -aG docker $USER
 
 
 # install rbenv
-git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
-git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
-git clone git://github.com/jf/rbenv-gemset.git ~/.rbenv/plugins/rbenv-gemset
-mkdir -p ~/.rbenv/plugins
-git clone https://github.com/ianheggie/rbenv-binstubs.git ~/.rbenv/plugins
-echo "gem: --no-ri --no-rdoc" > ~/.gemrc
+# git clone git://github.com/sstephenson/rbenv.git ~/.rbenv 
+# git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build 
+# git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash 
+# git clone git://github.com/jf/rbenv-gemset.git ~/.rbenv/plugins/rbenv-gemset 
+# mkdir -p ~/.rbenv/plugins .
+# git clone https://github.com/ianheggie/rbenv-binstubs.git ~/.rbenv/plugins 
+# echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 
 # install Vundle plugin manager
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -53,7 +53,9 @@ git clone https://github.com/jimeh/tmuxifier.git ~/.tmuxifier
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 
 # copy setting
-cp ./. ~/ -R
+cd config
 cp ./kglobalshortcutsrc ~/.kde/share/config/
+cp ./. ~/ -R
+
 exit 0
 

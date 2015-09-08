@@ -13,7 +13,7 @@
   go_left = KP_Left
 [profiles]
   [[default]]
-    palette = "#2e3436:#7fa23c:#a7ba52:#c4a000:#3465a4:#778757:#c9c96c:#f1f1f1:#000000:#d66746:#8ae234:#fce94f:#729fcf:#141414:#a4c247:#ffffff"
+    palette = "#2e3436:#b7a257:#9eba52:#c2b165:#3465a4:#778757:#cf5f48:#f1f1f1:#000000:#d66746:#8ae234:#fce94f:#729fcf:#141414:#a4c247:#ffffff"
     background_image = None
     custom_command = bash -l
     use_system_font = False
