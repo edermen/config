@@ -21,8 +21,8 @@ libcurl4-openssl-dev \
 python-software-properties software-properties-common \
 libffi-dev \
 node.js \
-mysql-server mysql-client libmysqlclient-dev \
-postgresql-common postgresql-9.3 postgresql-contrib  libpq-dev pgadmin3 \
+#mysql-server mysql-client libmysqlclient-dev \
+postgresql-common postgresql-9.4 postgresql-contrib  libpq-dev pgadmin3 \
 exuberant-ctags \
 vim-nox \
 terminator \
@@ -37,7 +37,7 @@ usermod -aG docker $USER
 
 
 # install rbenv
-# git clone git://github.com/sstephenson/rbenv.git ~/.rbenv 
+git clone git://github.com/sstephenson/rbenv.git ~/.rbenv 
 # git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build 
 # git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash 
 # git clone git://github.com/jf/rbenv-gemset.git ~/.rbenv/plugins/rbenv-gemset 
@@ -53,9 +53,9 @@ git clone https://github.com/jimeh/tmuxifier.git ~/.tmuxifier
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 
 # copy setting
-cd config
-cp ./kglobalshortcutsrc ~/.kde/share/config/
-cp ./. ~/ -R
+#cd ~/config
+#cp ./kglobalshortcutsrc ~/.kde/share/config/
+#cp ./. ~/ -R
 
 exit 0
 

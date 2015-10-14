@@ -57,12 +57,11 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ \[$GREEN\]\t\[$RED\]-\[$BLUE\]\u\[$YELLOW\]\[$YELLOW\]\w\[\033[m\]\[$MAGENTA\]\$(__git_ps1)\[$WHITE\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
-
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
@@ -124,10 +123,14 @@ alias drma='docker rm $(docker ps -a -q)'
 alias drmi='docker rmi $(docker images -q)'
 #  git alias
 alias gss='git status'
+alias gl='git log'
+alias gl1='git log -1'
+alias glp='git log -p'
 alias gaa='git add .'
 alias gb='git branch'
 alias gcn='git checkout -b'
 alias gcc='git commit -m'
+alias gct='git commit -m "`echo $DATEST`"'
 alias gp='git push'
 alias gpul='git pull'
 # Add an "alert" alias for long running commands.  Use like so:
@@ -167,3 +170,8 @@ eval "$(rbenv init -)"
 [ -r /home/solli/.byobu/prompt ] && . /home/solli/.byobu/prompt   #byobu-prompt#
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 eval "$(tmuxifier init -)"
+[[ -s "/home/solli/.gvm/scripts/gvm" ]] && source "/home/solli/.gvm/scripts/gvm"
+
+
+DATEST='Temporary commit on ~ '$(date +%H:%M:%S)' > '$(date +%d/%m/%Y)
+export DATEST
